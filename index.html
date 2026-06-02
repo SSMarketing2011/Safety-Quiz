@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoot Smart Safety Quiz</title>
+  <meta name="description" content="A 5-question firearm safety quiz with instant feedback and explanations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <img
+      class="quiz-page-banner"
+      src="https://content.app-us1.com/jqE3a/2026/06/02/8597f0a4-6034-4414-8216-0d8518e8014c.png"
+      alt="Shoot Smart Safety Quiz"
+    >
+
+    <section class="quiz-card" aria-live="polite">
+      <header class="quiz-header">
+        <p class="kicker">Safety Skills Check</p>
+        <h1>5-Question Safety Scenario Quiz</h1>
+        <p class="subtitle">Pick your move for each real-world scenario, then see instant feedback on what keeps everyone safest.</p>
+      </header>
+
+      <section class="progress-block" aria-label="Quiz progress">
+        <div class="progress-meta">
+          <span id="progressLabel">Question 1 of 5</span>
+          <span id="scoreLabel">Score: 0</span>
+        </div>
+        <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="5" aria-valuenow="1" id="progressBar">
+          <span id="progressFill"></span>
+        </div>
+      </section>
+
+      <section class="question-nav-wrap" aria-label="Question navigator">
+        <p class="nav-label">Jump To Question</p>
+        <div id="questionNav" class="question-nav"></div>
+      </section>
+
+      <section id="questionArea" class="question-area">
+        <h2 id="questionText"></h2>
+        <div id="answerList" class="answer-list"></div>
+      </section>
+
+      <section id="feedbackCard" class="feedback-card" hidden>
+        <p id="feedbackStatus" class="feedback-status"></p>
+        <p id="feedbackWhy" class="feedback-why"></p>
+      </section>
+
+      <footer class="quiz-footer">
+        <button id="nextBtn" class="btn" type="button" hidden>Next Question</button>
+        <button id="restartBtn" class="btn btn-secondary" type="button">Restart Quiz</button>
+      </footer>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
